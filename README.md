@@ -18,8 +18,8 @@
 
 ## 🔗 Enlaces del Proyecto
 
-- **Repositorio GitHub:** [https://github.com/LunaJuarezJuan/SM2_Examen_CICD.git](https://github.com/LunaJuarezJuan/SM2_Examen_CICD.git)
-- **Pipeline CI/CD:** [Ver Actions](https://github.com/LunaJuarezJuan/SM2_Examen_CICD/actions)
+- **Repositorio GitHub:** [https://github.com/JBLunaJ/SM2_Examen_CICD.git](https://github.com/JBLunaJ/SM2_Examen_CICD.git)
+- **Pipeline CI/CD:** [Ver Actions](https://github.com/JBLunaJ/SM2_Examen_CICD/actions)
 
 ---
 
@@ -143,7 +143,7 @@ Acees_Group/
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/LunaJuarezJuan/SM2_Examen_CICD.git
+git clone https://github.com/JBLunaJ/SM2_Examen_CICD.git
 cd SM2_Examen_CICD
 
 # Instalar dependencias
