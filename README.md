@@ -1,6 +1,6 @@
 # 📱 Acees Group - Sistema de Control de Acceso NFC
 
-![CI/CD Pipeline](https://github.com/TU_USUARIO/SM2_Examen_CICD/workflows/Mobile%20CI/CD%20Pipeline/badge.svg)
+![CI/CD Pipeline](https://github.com/JBLunaJ/SM2_Examen_CICD/workflows/Mobile%20CI/CD%20Pipeline/badge.svg)
 
 > Sistema completo de control de acceso con tecnología NFC desarrollado en Flutter con arquitectura MVVM y Pipeline de CI/CD automatizado.
 
@@ -9,7 +9,7 @@
 ## 👨‍💻 Datos del Alumno
 
 **Nombre:** Juan Brendon Luna Juarez
-**Tecnología:** Flutter 3.19.0  
+**Tecnología:** Flutter 3.24.0  
 **Framework:** Flutter SDK  
 **Lenguaje:** Dart  
 **Arquitectura:** MVVM (Model-View-ViewModel)
@@ -70,7 +70,7 @@ El pipeline genera automáticamente:
 ## 🛠️ Tecnologías Utilizadas
 
 ### Frontend
-- **Flutter** 3.19.0
+- **Flutter** 3.24.0
 - **Dart** SDK
 - **Provider** - Gestión de estado
 - **flutter_nfc_kit** - Lectura NFC
@@ -135,7 +135,7 @@ Acees_Group/
 ## 🚦 Cómo Ejecutar el Proyecto
 
 ### Prerrequisitos
-- Flutter SDK 3.19.0 o superior
+- Flutter SDK 3.24.0 o superior
 - Android SDK
 - Git
 
