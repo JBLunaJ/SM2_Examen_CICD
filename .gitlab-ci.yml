@@ -1,0 +1,48 @@
+# GitLab CI/CD Pipeline - Alternativa a GitHub Actions
+# Este archivo funciona en GitLab.com (gratis, sin restricciones)
+
+image: ghcr.io/cirruslabs/flutter:stable
+
+stages:
+  - test
+  - build
+
+# Variables globales
+variables:
+  FLUTTER_VERSION: "3.19.0"
+
+# Antes de cada job
+before_script:
+  - flutter --version
+  - flutter pub get
+
+# Stage 1: Análisis de Calidad
+code_quality:
+  stage: test
+  script:
+    - echo "🔍 Ejecutando análisis de código..."
+    - flutter analyze
+  allow_failure: false
+
+# Stage 2: Tests Unitarios
+unit_tests:
+  stage: test
+  script:
+    - echo "🧪 Ejecutando pruebas unitarias..."
+    - flutter test --reporter expanded
+  allow_failure: false
+  coverage: '/lines[\.]+: \d+\.\d+%/'
+
+# Stage 3: Build APK
+build_apk:
+  stage: build
+  script:
+    - echo "📦 Compilando APK..."
+    - flutter build apk --release
+  artifacts:
+    name: "app-release-$CI_COMMIT_SHORT_SHA"
+    paths:
+      - build/app/outputs/flutter-apk/app-release.apk
+    expire_in: 1 week
+  only:
+    - main
