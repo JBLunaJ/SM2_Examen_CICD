@@ -260,9 +260,6 @@ Este proyecto demuestra la implementación exitosa de un pipeline de CI/CD profe
 
 ---
 
-## 📄 Licencia
-
-MIT License - Acees Group © 2025
 
 ---
 
