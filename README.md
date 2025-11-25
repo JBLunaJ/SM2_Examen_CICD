@@ -9,7 +9,7 @@
 ## 👨‍💻 Datos del Alumno
 
 **Nombre:** Juan Brendon Luna Juarez
-**Tecnología:** Flutter 3.24.0  
+**Tecnología:** Flutter 3.29.0  
 **Framework:** Flutter SDK  
 **Lenguaje:** Dart  
 **Arquitectura:** MVVM (Model-View-ViewModel)
@@ -30,12 +30,49 @@ Este proyecto cuenta con un pipeline completo de **Integración y Entrega Contin
 ### Etapas del Pipeline:
 
 1. ✅ **Checkout Code** - Descarga el código del repositorio
-2. ✅ **Setup Flutter** - Configura el entorno Flutter 3.19.0
+2. ✅ **Setup Flutter** - Configura el entorno Flutter (stable latest)
 3. ✅ **Install Dependencies** - Instala todas las dependencias (`flutter pub get`)
-4. ✅ **Code Quality Check** - Audita la calidad del código (`flutter analyze`)
-5. ✅ **Run Unit Tests** - Ejecuta las pruebas unitarias (`flutter test`)
-6. ✅ **Build Application** - Genera el APK de release (`flutter build apk`)
+4. ✅ **Code Quality Check** - Audita la calidad del código (`flutter analyze --no-fatal-infos --no-fatal-warnings`)
+5. ✅ **Run Unit Tests** - Ejecuta las pruebas unitarias (`flutter test`) - **11/11 tests pasando**
+6. ✅ **Build Application** - Genera el APK de release (`flutter build apk --release`)
 7. ✅ **Upload Artifact** - Sube el APK como artefacto descargable
+
+---
+
+## 📋 Cumplimiento de Requisitos del Examen
+
+### ✅ PARTE 1: Lógica de Negocio
+
+- ✅ **Archivo de utilidades creado:** `lib/utils/validators.dart`
+- ✅ **5 funciones implementadas y probadas:**
+  1. Validación de Email (@ y .)
+  2. Seguridad de Contraseña (> 6 caracteres)
+  3. Calculadora de Descuento (precio con % descuento)
+  4. Validación de Rango (1-10 inclusive)
+  5. Conversión a Mayúsculas
+- ✅ **Tests ejecutados localmente:** 11/11 pasando
+
+### ✅ PARTE 2: Configuración del Repositorio
+
+- ✅ **Repositorio público creado:** `SM2_Examen_CICD`
+- ✅ **Código subido a rama main**
+- ✅ **URL del repositorio:** https://github.com/JBLunaJ/SM2_Examen_CICD
+
+### ✅ PARTE 3: Workflow de GitHub Actions
+
+- ✅ **Archivo del workflow:** `.github/workflows/ci-pipeline.yml`
+- ✅ **Pipeline ejecutándose automáticamente** en cada push
+- ✅ **7 etapas completadas exitosamente**
+- ✅ **APK generado y disponible** en Artifacts
+
+### ✅ PARTE 4: Documentación y Evidencias
+
+- ✅ **README.md completo** con toda la información
+- ✅ **Badge de estado** mostrando "passing" (verde)
+- ✅ **3 capturas de evidencia:**
+  - Captura 1: Tests unitarios pasando (11/11)
+  - Captura 2: Build APK exitoso
+  - Captura 3: Artifact descargable
 
 ---
 
@@ -90,23 +127,37 @@ El pipeline genera automáticamente:
 
 ## 📊 Evidencias del Pipeline
 
-### 1. Tests Ejecutándose
+### 1. Tests Ejecutándose ✅
 
-![Tests Running](ruta/a/captura_tests.png)
+**Evidencia del paso "Run Unit Tests":**
 
-> Captura de pantalla mostrando los 11 tests pasando exitosamente en GitHub Actions.
+![Tests ejecutándose](imagenesreadme/test.png)
 
-### 2. Build APK Exitoso
+**Resultado: 11 tests pasando exitosamente**
 
-![Build Success](ruta/a/captura_build.png)
+![11 tests passed](imagenesreadme/11test.png)
 
-> Captura de la compilación exitosa del APK.
+> **Descripción:** Esta captura muestra la ejecución exitosa de las 11 pruebas unitarias en GitHub Actions. Todas las funciones de validación (validateEmail, validatePasswordSecurity, calculateDiscount, isInValidRange, toUpperCase) pasaron sus respectivos tests sin errores.
 
-### 3. Artefacto Descargable
+---
 
-![Artifact](ruta/a/captura_artifact.png)
+### 2. Build APK Exitoso ✅
 
-> APK generado disponible para descarga en la sección de Artifacts.
+**Evidencia del paso "Build Application":**
+
+![Build APK](imagenesreadme/buildapk.png)
+
+> **Descripción:** Esta captura muestra la compilación exitosa del APK de Android. El proceso completó la tarea `assembleRelease` de Gradle y generó el archivo `app-release.apk` listo para distribución. El build se completó sin errores en aproximadamente 4-5 minutos.
+
+---
+
+### 3. Artefacto Descargable ✅
+
+**Evidencia del paso "Upload Artifact":**
+
+![Artifact disponible](<imagenesreadme/capturaMobile CI/CD.png>)
+
+> **Descripción:** Esta captura muestra el APK compilado disponible para descarga en la sección "Artifacts" de GitHub Actions. El artefacto `app-release` contiene el instalable Android generado automáticamente por el pipeline, listo para ser descargado e instalado en dispositivos.
 
 ---
 
@@ -174,11 +225,50 @@ flutter build apk --release
 
 ---
 
+## 📝 Conclusiones del Proyecto
+
+### Logros Alcanzados:
+
+1. ✅ **Pipeline CI/CD funcional al 100%** - Automatización completa desde commit hasta APK
+2. ✅ **11 pruebas unitarias** - Todas pasando exitosamente
+3. ✅ **Calidad de código verificada** - Análisis estático implementado
+4. ✅ **APK generado automáticamente** - Listo para distribución
+5. ✅ **Documentación completa** - README con evidencias visuales
+
+### Tecnologías Implementadas:
+
+- **Flutter/Dart** - Desarrollo móvil multiplataforma
+- **GitHub Actions** - CI/CD automatizado
+- **Testing** - Pruebas unitarias con flutter_test
+- **Static Analysis** - Control de calidad de código
+
+### Aprendizajes:
+
+Este proyecto demuestra la implementación exitosa de un pipeline de CI/CD profesional que:
+- Garantiza calidad mediante tests automatizados
+- Detecta errores antes de producción
+- Genera builds automáticamente
+- Facilita el trabajo colaborativo
+
+---
+
+## 📧 Contacto
+
+**Estudiante:** Juan Brendon Luna Juarez  
+**Repositorio:** https://github.com/JBLunaJ/SM2_Examen_CICD  
+**Pipeline:** https://github.com/JBLunaJ/SM2_Examen_CICD/actions
+
+---
+
 ## 📄 Licencia
 
 MIT License - Acees Group © 2025
 
 ---
+
+**Fecha de entrega:** 25 de Noviembre, 2025  
+**Curso:** Servicios Móviles II  
+**Tema:** Pipeline de CI/CD con GitHub Actions
 
 
 
